@@ -22,7 +22,6 @@ addBtn.addEventListener("click", () => {
   taskInput.value = "";
 });
 
-// Add a single task to the page
 function addTaskToDOM(task) {
   const li = document.createElement("li");
   if (task.completed) li.classList.add("completed");
@@ -49,13 +48,11 @@ function addTaskToDOM(task) {
   li.appendChild(deleteBtn);
   taskList.appendChild(li);
 
-  // Handle completion toggle
   checkbox.addEventListener("change", () => {
     li.classList.toggle("completed");
     updateTaskStatus(task.text, checkbox.checked);
   });
 
-  // Handle delete
   deleteBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     li.remove();
@@ -63,32 +60,27 @@ function addTaskToDOM(task) {
   });
 }
 
-// Save task to localStorage
 function saveTaskToLocalStorage(task) {
   const tasks = getTasksFromLocalStorage();
   tasks.push(task);
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-// Load all tasks from localStorage
 function loadTasks() {
   const tasks = getTasksFromLocalStorage();
   tasks.forEach(addTaskToDOM);
 }
 
-// Get tasks array from localStorage
 function getTasksFromLocalStorage() {
   return JSON.parse(localStorage.getItem("tasks")) || [];
 }
 
-// Delete a task
 function deleteTaskFromLocalStorage(taskText) {
   const tasks = getTasksFromLocalStorage();
   const updatedTasks = tasks.filter((task) => task.text !== taskText);
   localStorage.setItem("tasks", JSON.stringify(updatedTasks));
 }
 
-// Update task completion status
 function updateTaskStatus(taskText, completed) {
   const tasks = getTasksFromLocalStorage();
   const updatedTasks = tasks.map((task) =>
