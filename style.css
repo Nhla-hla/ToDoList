@@ -90,7 +90,7 @@ li.completed .task-text {
     margin-left: 15px;
     padding: 5px;
     border-radius: 50%;
-    transition: background 0.2s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 .delete-button:hover {
     background-color: #f0e1d8;
