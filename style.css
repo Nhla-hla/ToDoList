@@ -20,7 +20,7 @@ body {
     border-radius: 8px;
     font-size: 16px;
 }
-#addTaskButton {
+#add-btn {
     background-color: rgb(236, 210, 157);
     color: white;
     border: none;
