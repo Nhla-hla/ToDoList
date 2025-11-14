@@ -1,0 +1,41 @@
+body {
+    background-image: url("");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container {
+    background: rgb(250, 224, 205);
+    max-width: 600px;
+    margin: 45px auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+#task-input {
+    background-color: #f9f7fe;
+    width: 70%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+#addTaskButton {
+    background-color: rgb(236, 210, 157);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 7px;
+}
+.task-box {
+    background: f9f4ee;
+    border-radius: 20px;
+    border: 1px solid #e6d6ca;
+    padding: 15px;
+    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.05);
+    max-height: 400px;
+    overflow-y: auto;
+}
